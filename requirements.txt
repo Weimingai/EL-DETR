@@ -1,0 +1,9 @@
+cython
+torch>=1.7.0
+torchvision>=0.6.0
+scipy
+termcolor
+numpy
+matplotlib
+argparse
+pillow
