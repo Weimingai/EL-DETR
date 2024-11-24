@@ -39,7 +39,7 @@ python main.py \
 ```
 
 ### Evaluation
-To evaluate conditional DETR-R50 on COCO *val* with 8 GPUs run:
+To evaluate El-DETR
 ```shell
 python main.py --eval \
     --resume <checkpoint.pth> \
@@ -49,7 +49,7 @@ python main.py --eval \
 
 ## License
 
-EL-DETR is released under the Apache 2.0 license.
+EL-DETR is released under the Apache 2.0 license. - see the [LICENSE](./LICENSE) file for details.
 
 
 ## Citation
