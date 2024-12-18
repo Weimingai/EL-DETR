@@ -115,6 +115,13 @@ def get_args_parser():
     parser.add_argument('--world_size', default=1, type=int,
                         help='number of distributed processes')
     parser.add_argument('--dist_url', default='env://', help='url used to set up distributed training')
+
+    # hybrid and EC-loss
+    parser.add_argument('--k_one2many', default=6, type=int, help='k_one2many')
+    parser.add_argument('--lambda_one2many', default=1, type=int, help='lambda_one2many')
+    parser.add_argument('--aux_coff', default=1, type=float, help='aux_coff')
+    parser.add_argument('--num_queries_one2many', default=500, type=int, help='num_queries_one2many')
+
     return parser
 
 
@@ -133,9 +140,6 @@ def _matched_state(state: Dict[str, torch.Tensor], params: Dict[str, torch.Tenso
             missed_list.append(k)
 
     return matched_state, {'missed': missed_list, 'unmatched': unmatched_list}
-
-
-from lion_pytorch import Lion # Lion Optimizer
 
 
 def main(args):
@@ -173,8 +177,6 @@ def main(args):
     ]
     optimizer = torch.optim.AdamW(param_dicts, lr=args.lr,
                                   weight_decay=args.weight_decay)
-
-    # optimizer = Lion(param_dicts, lr=1e-5, weight_decay=1e-4) #  Lion
 
     lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, args.lr_drop)
 
@@ -248,7 +250,8 @@ def main(args):
             sampler_train.set_epoch(epoch)
         train_stats = train_one_epoch(
             model, criterion, data_loader_train, optimizer, device, epoch,
-            args.clip_max_norm)
+            args.clip_max_norm,
+            args.k_one2many, args.lambda_one2many, args.aux_coff)
         lr_scheduler.step()
 
         test_stats, coco_evaluator = evaluate(
