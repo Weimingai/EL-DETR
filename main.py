@@ -117,9 +117,10 @@ def get_args_parser():
     parser.add_argument('--dist_url', default='env://', help='url used to set up distributed training')
 
     # hybrid and EC-loss
-    parser.add_argument('--k_one2many', default=6, type=int, help='k_one2many')
-    parser.add_argument('--lambda_one2many', default=1, type=int, help='lambda_one2many')
-    parser.add_argument('--aux_coff', default=1, type=float, help='aux_coff')
+    parser.add_argument('--lambda_one2many', default=6, type=int, help='k_one2many')
+    parser.add_argument('--alphas_one2one', default=1, type=int, help='lambda_one2many')
+    parser.add_argument('--alphas_one2many', default=0.5, type=int, help='lambda_one2many')
+    parser.add_argument('--alphas_aux', default=0.5, type=float, help='aux_coff')
     parser.add_argument('--num_queries_one2many', default=500, type=int, help='num_queries_one2many')
 
     return parser
@@ -251,7 +252,9 @@ def main(args):
         train_stats = train_one_epoch(
             model, criterion, data_loader_train, optimizer, device, epoch,
             args.clip_max_norm,
-            args.k_one2many, args.lambda_one2many, args.aux_coff)
+            args.lambda_one2many, args.alphas_one2one, args.alphas_one2many, args.alphas_aux,
+            args.cls_loss_coef, args.bbox_loss_coef, args.giou_loss_coef,
+        )
         lr_scheduler.step()
 
         test_stats, coco_evaluator = evaluate(
