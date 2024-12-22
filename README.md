@@ -1,6 +1,6 @@
 # EL-DETR
 
-This repository is an official implementation of the paper "An Explainable Lesion DEtection TRansformer (EL-DETR) model for medical imaging diagnosis decision support". (has been submitted in to Decision Support Systems)
+This repository is an official implementation of the paper "An Explainable Lesion DEtection TRansformer (EL-DETR) model for medical imaging diagnosis decision support". (has been submitted to Decision Support Systems)
 
 
 ## Introduction
