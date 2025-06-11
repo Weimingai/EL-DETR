@@ -1,6 +1,6 @@
 # EL-DETR
 
-This repository is an official implementation of the paper "An Explainable Lesion DEtection TRansformer (EL-DETR) model for medical imaging diagnosis decision support". (has been submitted to Decision Support Systems)
+This repository is an official implementation of the paper "An explainable lesion detection transformer model for medical imaging diagnosis decisionsupport: Design science research". (has been accepted to Decision Support Systems)
 
 
 ## Introduction
@@ -56,9 +56,9 @@ EL-DETR is released under the Apache 2.0 license. - see the [LICENSE](./LICENSE)
 
 ```bibtex
 @inproceedings{Wang2024-EL-DETR,
-  title       = {An Explainable Lesion DEtection TRansformer (EL-DETR) model for medical imaging diagnosis decision support},
+  title       = {An explainable lesion detection transformer model for medical imaging diagnosis decisionsupport: Design science research},
   author      = {Wang et al. },
   booktitle   = {Decisoin Support Systems},
-  year        = {2024}
+  year        = {2025}
 }
 ```
