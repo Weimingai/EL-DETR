@@ -118,7 +118,7 @@ def get_args_parser():
 
     # hybrid and EC-loss
     parser.add_argument('--lambda_one2many', default=6, type=int, help='k_one2many')
-    parser.add_argument('--alphas_one2one', default=1, type=int, help='lambda_one2many')
+    parser.add_argument('--alphas_one2one', default=1, type=int, help='lambda_one2one')
     parser.add_argument('--alphas_one2many', default=0.5, type=int, help='lambda_one2many')
     parser.add_argument('--alphas_aux', default=0.5, type=float, help='aux_coff')
     parser.add_argument('--num_queries_one2many', default=500, type=int, help='num_queries_one2many')
