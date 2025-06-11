@@ -1,0 +1,12 @@
+Colonoscopy dataset：
+Link: https://www.depeca.uah.es/colonoscopy_dataset/
+Reference: P. Mesejo, D. Pizarro, A. Abergel, O. Rouquette, S. Beorchia, L. Poincloux, A. Bartoli, Computer-aided classification of gastrointestinal lesions in regular colonoscopy, IEEE Trans. Med. Imaging 35 (2016) 2051–2063. https://doi.org/10.1109/TMI.2016.2547947.
+
+MICCAI dataset and KUMC dataset:
+Link: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FCBUOR
+Reference: K. Li, M.I. Fathan, K. Patel, T. Zhang, C. Zhong, A. Bansal, A. Rastogi, J.S. Wang, G. Wang, Colonoscopy polyp detection and classification: Dataset creation and comparative evaluations, PLOS ONE 16 (2021) e0255809. https://doi.org/10.1371/journal.pone.0255809.
+
+Tumor Dataset dataset:
+Link:https://docs.ultralytics.com/zh/datasets/detect/brain-tumor/
+
+Note: We did further labeling and preprocessing on the basis of the original data to build a demonstration and evaluation dataset for this work. Data will be made available on request. 
