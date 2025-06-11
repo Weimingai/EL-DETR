@@ -55,7 +55,7 @@ EL-DETR is released under the Apache 2.0 license. - see the [LICENSE](./LICENSE)
 ## Citation
 
 ```bibtex
-@inproceedings{Wang2024-EL-DETR,
+@inproceedings{ Wang2025-EL-DETR,
   title       = {An explainable lesion detection transformer model for medical imaging diagnosis decisionsupport: Design science research},
   author      = {Wang et al. },
   booktitle   = {Decisoin Support Systems},
