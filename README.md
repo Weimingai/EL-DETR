@@ -34,8 +34,8 @@ To train EL-DETR
 ```shell
 python main.py \
     --resume auto \
-    --coco_path /path/to/coco \
-    --output_dir output/conddetr_r50_epoch50
+    --coco_path /your_coco_dataset_path \
+    --output_dir output/
 ```
 
 ### Evaluation
@@ -43,7 +43,7 @@ To evaluate El-DETR
 ```shell
 python main.py --eval \
     --resume <checkpoint.pth> \
-    --coco_path /path/to/coco \
+    --coco_path /your_coco_dataset_path \
     --output_dir output/<output_path>
 ```
 
@@ -59,6 +59,7 @@ EL-DETR is released under the Apache 2.0 license. - see the [LICENSE](./LICENSE)
   title       = {An explainable lesion detection transformer model for medical imaging diagnosis decisionsupport: Design science research},
   author      = {Wang et al. },
   booktitle   = {Decisoin Support Systems},
-  year        = {2025}
+  year        = {2025},
+  doi         = {https://doi.org/10.1016/j.dss.2025.114492}
 }
 ```
