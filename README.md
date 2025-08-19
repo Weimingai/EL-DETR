@@ -5,7 +5,7 @@ This repository is an official implementation of the paper "An explainable lesio
 
 ## Introduction
 
-The code will be made fully available after the article is published online.
+Utilizing machine learning methods for auxiliary decision support in medical imaging significantly reduces missed detections and unnecessary expenses. However, the strict accuracy and transparency requirements in the medical field pose challenges for deep learning applications based on neural networks. To address these issues, we propose a novel artificial intelligence artifact guided by the design science research methodology for lesion detection decision support in medical images, called Explainable Lesion DEtection TRansformer (EL-DETR). This approach features an explainable separate attention mechanism in the decoder that highlights the attention weights of content and location queries, providing insights into the inference process through attention mapping visualizations. In addition, we introduce a hybrid matching query strategy to enhance the learning of positive samples and develop an adaptive efficient compound loss function to optimize training. We demonstrate ELDETR's superior accuracy, robustness, and interpretability using four real-world datasets, establishing it as a reliable tool for clinical diagnosis and treatment decision support based on medical imaging.
 
 
 ## Installation
